@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "317234143539",
+    "project_id": "healsupp-d9eea",
+    "storage_bucket": "healsupp-d9eea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317234143539:android:84b0ac9b31e631fe575e46",
+        "android_client_info": {
+          "package_name": "com.mindhunter.healsupp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317234143539-0ngsr83bk0li1v7brptrtsdd60po706p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR52rnGGEdTH4BFClO8Oi_A71nJVqtoMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317234143539-0ngsr83bk0li1v7brptrtsdd60po706p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
