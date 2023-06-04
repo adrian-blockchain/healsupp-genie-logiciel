@@ -67,55 +67,46 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sign In'),
-        backgroundColor: Colors.blueGrey,
-      ),
 
-      body: Container(
-        width: double.infinity,
-        height: 350,
-        decoration: const ShapeDecoration(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(64),
-              bottomRight: Radius.circular(64),
+
+      body: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration:const BoxDecoration(
+              image : DecorationImage(
+                image: AssetImage('assets/intro_page.jpg'),
+                fit: BoxFit.fill,
+              ),
             ),
           ),
-          gradient: LinearGradient(
-            colors: <Color>[
-              Colors.green,
-              Colors.greenAccent,
-            ],
+          Center(
+            child:Image.asset("assets/logo.png") ,
           ),
-        ),
-        child: const Padding(
-          padding: EdgeInsets.only(top: 46.0, left: 20.0),
-          child: Text(
-            'Let s know each other',
-            style: TextStyle(
-              fontFamily: 'Nunito',
-              fontWeight: FontWeight.w800,
-              color: Colors.black,
-              fontSize: 36,
+          Positioned(
+            bottom: 20,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30)
+              ),
+              alignment: Alignment.bottomCenter,
+
+              height: 50,
+              child:SignInButton(
+                Buttons.Google,
+                onPressed: (){
+                  _login();
+                },
+              ),
             ),
           ),
-        ),
+
+
+
+        ],
       ),
-      bottomNavigationBar: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/logo.png', width: 200, height: 200,),
-            SignInButton(
-              Buttons.Google,
-              onPressed: (){
-                _login();
-              },
-            ),
-          ],
-        ),
-      ),
-    );
+      );
   }
 }

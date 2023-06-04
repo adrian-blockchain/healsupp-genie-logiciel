@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../components/PersonalPage.dart';
 import 'MarketplacePage.dart';
+import 'ShoppingListPage.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -55,10 +56,4 @@ class _MainPageState extends State<MainPage> {
 
 
 
-class ShoppingListPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Text('Shopping List Page');
-  }
-}
 
